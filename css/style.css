@@ -1,0 +1,636 @@
+@font-face {
+  font-family: 'Muller';
+  src: url(../fonts/MullerRegular.woff2) format('woff2'), url(../fonts/MullerRegular.woff) format('woff');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url(../fonts/MullerMedium.woff2) format('woff2'), url(../fonts/MullerMedium.woff) format('woff');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url(../fonts/MullerLight.woff2) format('woff2'), url(../fonts/MullerLight.woff) format('woff');
+  font-display: swap;
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url(../fonts/MullerBold.woff2) format(woff2), url(../fonts/MullerBold.woff) format('woff');
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* палитра */
+  --color-white: #FFF;
+  --color-light: #f1f1f1;
+  --color-light-grey: #999;
+  --color-grey: #666;
+  --color-dark: #333;
+  --color-black: #000;
+  --color-light-gold: #FFCC66;
+  --color-gold: #CC9933;
+  --color-bronze: #AA7306;
+
+  /* тема */
+  --bg-color: var(--color-light);
+  --heading-color:var(--color-dark);
+  --text-color:var(--color-black);
+}
+
+a {
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+a:hover {
+  color: var(--color-bronze);
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-family: 'Muller';
+  background-color: var(--bg-color);
+}
+
+.container{
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 100px;
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  border-radius: 10px;
+  padding: 13px 20px;
+  transition: .3s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  transform: scale(1.05);
+}
+
+.section-headind {
+  margin-top: 70px;
+  margin-left: 35px;
+  font-size: 40px;
+  color: var(--heading-color);
+}
+
+.link {
+  display: inline-block;
+  font-size: 16px;
+  color: var(--color-gold);
+}
+
+.arrow-icon {
+  vertical-align: middle;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 2;
+}
+
+/* Шапка */
+.header-top {
+  height: 114px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img{
+  width: 260px;
+  margin-right: 50px;
+}
+
+.phone-link {
+  font-size: 20px;
+}
+
+.login-icon {
+  transform: translateY(-2px);
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background: var(--color-white);
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+.nav-list {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  margin-left: 45px;
+}
+
+.nav-item {
+  flex-grow: 1;
+
+}
+.nav-item + .nav-item {
+  margin-left: 45px;
+}
+.right-menu {
+  padding-left: 55px;
+  border-left: #E1E1E1 1px solid;
+}
+
+.nav-btn {
+margin-right: 40px;
+}
+
+.nav-link,
+.phone-link {
+  color: var(--color-grey);
+}
+
+/* Спецпредложения */
+
+.offers-cards {
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 1;
+}
+
+.offers {
+  width: 573px;
+}
+
+.offers + .offers {
+  margin-left: 23px;
+}
+
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 40px;
+  padding-right: 100px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.two-offers {
+  position: relative;
+  min-height: 258px;
+  max-width: 573px;
+}
+
+.two-offers::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/offers/DARKEN.svg);
+}
+
+.offer-maldives {
+  margin-bottom: 23px;
+  background-image: url(../img/offers/1.jpg);
+}
+
+.offer-сrete {
+  background-image: url(../img/offers/2.jpg);
+}
+
+.one-offer {
+  position: absolute;
+  min-height: 540px;
+  max-width: 573px;
+  background-image: url(../img/offers/3.jpg);
+}
+
+.one-offer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/offers/DARKEN_B.svg);
+
+}
+
+.header-offers {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--color-white);
+}
+
+.header-offers-two {
+  font-size: 40px;
+}
+
+.header-offer-one {
+  font-size: 60px;
+}
+
+.price-offers {
+  position: relative;
+  margin-bottom: 47px;
+  color: var(--color-white);
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.price-offer-one {
+  font-size: 30px;
+}
+
+.offer-link {
+  position: relative;
+  color: var(--color-light-gold);
+  font-size: 16px;
+}
+
+/* О нас */
+
+.about-description {
+  max-width: 880px;
+  font-size: 16px;
+  line-height: 2;
+}
+
+/* Услуги */
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.servises-item {
+  margin-bottom: 23px;
+  width: 573px;
+  min-height: 330px;
+  background-color: var(--color-white);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.servises-item:not(:nth-child(even)) {
+  margin-right: 23px;
+}
+
+.servises-description {
+  padding: 20px 40px;
+
+}
+
+.servises-link{
+  font-size: 20px;
+  line-height: 2;
+}
+
+/* Преимущества */
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-card {
+  margin-bottom: 23px;
+  padding: 40px;
+  width: 275px;
+  min-height: 275px;
+  background-color: var(--color-white);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.advantages-card:not(:nth-child(4n)) {
+  margin-right: 23px;
+}
+
+/* Размещение */
+
+.hotels-img {
+  display: block;
+}
+
+.hotels-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hotels-list-item{
+  margin-bottom: 23px;
+  width: 374px;
+  background-color: var(--color-white);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.hotels-list-item-more {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 30px 47px;
+  background-image: url(../img/hotels/41.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.link-more-hotels {
+  color: var(--color-white);
+  font-size: 20px;
+}
+
+.link-more-hotels::after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  content: '';
+  height: 100%;
+  width: 100%;
+}
+
+.hotels-list-item:not(:nth-child(3n)) {
+  margin-right: 23px;
+}
+
+.hotels-description {
+  margin: 30px auto;
+  width: 280px;
+  min-height: 150px;
+
+}
+
+.fst-row {
+  display: flex;
+  justify-content: space-between;
+}
+.hotel-price {
+  max-width: 60%;
+}
+
+.rating {
+  width: 86px;
+}
+
+.hotels-description-black,
+.description-grey,
+.fst-row {
+  margin-bottom: 16px;
+}
+
+
+.description-grey,
+.description-grey-contacts {
+  color: var(--color-light-grey);
+}
+
+
+/* Хочу тур */
+
+.form-container {
+  width: 1170px;
+  height: 274px;
+  background-color: #E9E9E9;
+  border-radius: 15px;
+}
+
+.form-heading {
+  padding-top: 38px;
+  margin-bottom: 19px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  margin: auto 45px 71px 45px;
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+select {
+  min-width: 164px;
+}
+
+.form-style {
+  border: unset;
+  font-size: 16px;
+  font-family: 'Muller';
+}
+
+input {
+  max-width: 142px;
+}
+
+.form-item + .form-item {
+  border-left: #E1E1E1 1px solid;
+  padding-left: 20px;
+}
+.form-btn {
+  min-width: 100px;
+  padding: 13px 20px;
+  font-family: 'Muller';
+  font-size: 16px;
+  background-color: var(--color-white);
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  border-radius: 10px;
+  }
+
+
+/* Контакты */
+
+.contacts-box {
+  display: flex;
+  margin-bottom: 19px;
+  padding: 45px;
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+
+.contacts{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 45px;
+}
+
+.row {
+  display: flex;
+  width: 380px;
+}
+
+.row + .row {
+  margin-top: 23px;
+}
+
+.row:not(:last-child) {
+  border-bottom: #C4C4C4 1px solid;
+  padding-bottom: 23px;
+}
+
+.fst-col {
+  min-width: 145px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.snd-col {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.location-btn {
+  margin-top: 25px;
+  padding: 30px;
+  font-weight: bold;
+}
+
+.rec-img {
+  width: 70%;
+  background-image: url(../img/55.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+
+/* Footer */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 341px;
+  padding: 44px 50px;
+  background-color: var(--color-dark);
+  border-radius: 15px;
+  color: var(--color-white);
+  background-image: url(../img/footer_logo.svg);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: 738px;
+}
+
+.footer-info {
+  display: flex;
+  width: 70%;
+}
+
+.footer-info-left,
+.footer-info-right{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-info-left {
+  justify-content: space-between;
+  margin-right: 102px;
+  width: 320px;
+  line-height: 190%;
+}
+
+.footer-info-right {
+  width: 358px;
+}
+
+.info-right:not(:last-child) {
+  margin-bottom: 33px;
+}
+
+.footer-soсial {
+  display: flex;
+  flex-direction: column;
+  opacity: 0.5;
+}
+
+.social-icon-link {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.social-icon:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.tripadvisor {
+  background-image: url(../img/tripadvisor.svg);
+}
+
+.twitter {
+  background-image: url(../img/twitter.svg);
+}
+
+.facebook {
+  background-image: url(../img/facebook.svg);
+}
+
+.social {
+  background-image: url(../img/social.svg);
+}
+
+.instagram {
+  background-image: url(../img/instagram.svg);
+}
+
